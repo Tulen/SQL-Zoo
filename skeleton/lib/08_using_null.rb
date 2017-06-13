@@ -36,7 +36,7 @@ def all_teachers_join
       depts.name
     FROM
       teachers
-    FULL JOIN
+    LEFT JOIN
       depts on teachers.dept_id = depts.id
   SQL
 end
@@ -46,6 +46,7 @@ def all_depts_join
   # NB: you can avoid RIGHT OUTER JOIN (and just use LEFT) by swapping
   # the FROM and JOIN tables.
   execute(<<-SQL)
+    
   SQL
 end
 
